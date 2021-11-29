@@ -178,7 +178,8 @@ extension JTAppleCalendarView {
                 
                 let numberOfItemsInSection = collectionView(self, numberOfItemsInSection: section)
                 guard numberOfItemsInSection > 0 else {
-                    assert(false, "Number of sections in calendar = 0. Possible fixes (1) is your calendar visible size 0,0? (2) is your calendar already loaded/visible?")
+                    // No assert needed to unlock debug mode
+                    debugPrint("Number of sections in calendar = 0. Possible fixes (1) is your calendar visible size 0,0? (2) is your calendar already loaded/visible?")
                     return nil
                 }
                 let extraSection = itemIndex / numberOfItemsInSection

@@ -24,7 +24,7 @@
 
 extension JTAppleCalendarView {
     /// Lays out subviews.
-    override open func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         if !generalDelayedExecutionClosure.isEmpty, isCalendarLayoutLoaded {
             executeDelayedTasks(.general)

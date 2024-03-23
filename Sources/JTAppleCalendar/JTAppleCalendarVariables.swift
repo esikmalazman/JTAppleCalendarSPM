@@ -22,6 +22,8 @@
 //  THE SOFTWARE.
 //
 
+import UIKit
+
 // Calculated Variables
 extension JTAppleCalendarView {
     /// Workaround for Xcode bug that prevents you from connecting the delegate in the storyboard.
@@ -53,7 +55,7 @@ extension JTAppleCalendarView {
     }
     
     /// Returns all selected dates
-    open var selectedDates: [Date] {
+    public var selectedDates: [Date] {
         return selectedDatesSet.sorted()
     }
     

@@ -22,7 +22,9 @@
 //  THE SOFTWARE.
 //
 
-protocol JTAppleCalendarDelegateProtocol: class {
+import UIKit
+
+protocol JTAppleCalendarDelegateProtocol: AnyObject {
     // Variables
     var allowsDateCellStretching: Bool {get set}
     var _cachedConfiguration: ConfigurationParameters! {get set}

@@ -22,6 +22,8 @@
 //  THE SOFTWARE.
 //
 
+import UIKit
+
 /// Default delegate functions
 public extension JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, shouldSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) -> Bool { return true }
@@ -45,7 +47,7 @@ public extension JTAppleCalendarViewDelegate {
 /// the JTAppleCalendarViewDataSource object. data source provides the
 /// the calendar-view object with the information it needs to construct and
 /// then modify it self
-public protocol JTAppleCalendarViewDataSource: class {
+public protocol JTAppleCalendarViewDataSource: AnyObject {
     /// Asks the data source to return the start and end boundary dates
     /// as well as the calendar to use. You should properly configure
     /// your calendar at this point.
@@ -59,7 +61,7 @@ public protocol JTAppleCalendarViewDataSource: class {
 /// The delegate of a JTAppleCalendarView object must adopt the
 /// JTAppleCalendarViewDelegate protocol Optional methods of the protocol
 /// allow the delegate to manage selections, and configure the cells
-public protocol JTAppleCalendarViewDelegate: class {
+public protocol JTAppleCalendarViewDelegate: AnyObject {
     /// Asks the delegate if selecting the date-cell with a specified date is
     /// allowed
     /// - Parameters:
